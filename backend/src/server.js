@@ -9,9 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+
 if (process.env.NODE_ENV === "production") {
     const __dirname = path.resolve();
     app.use(express.static(path.join(__dirname, "../frontend", "build")));
