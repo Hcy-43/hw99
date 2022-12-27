@@ -1,0 +1,11 @@
+import mongoose from 'mongoose';
+import dotenv from 'dotenv-defaults';
+require('dotenv').config();
+export default {
+    connect: () => {
+        mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        }).then((res) => console.log("mongo db connection created"))
+    }
+};
