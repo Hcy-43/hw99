@@ -9,7 +9,8 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "server": "nodemon src/server.js --ext js --watch src --exec babel-node"
+    "server": "nodemon src/server.js --ext js --watch src --exec babel-node",
+    "deploy": "NODE_ENV=production babel-node src/server.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
